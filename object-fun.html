@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>object 和 function 可以入数组一样,用属性名或方法名作为下标来访问并处理</title>
+</head>
+
+<body>
+<script type="text/javascript">
+//object
+	var anObject = function(){}; 
+	anObject.a_Object_P1="Object-----a_Object_P1的属性";
+	anObject.a_Object_M1=function(){alert("Object-------a_Object_M1的方法");};
+	alert(anObject['a_Object_P1']);
+	anObject['a_Object_M1']();
+	for(var s in anObject) 
+	alert(s+ "is a " +typeof(anObject[s]));
+//function	
+/*	var anFun = function(){}; 
+	anFun.a_Fun_P1="a_Fun_1的属性";
+	anFun.a_Fun_M1=function(){alert("a_Fun_M1的方法");};
+	alert(anFun['a_Fun_P1']);
+	
+	anFun['a_Fun_M1']();
+	for(var s in anFun) 
+	alert(s+ "is a " +typeof(anFun[s]));*/
+</script>
+</body>
+</html>
